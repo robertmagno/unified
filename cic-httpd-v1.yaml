@@ -1,13 +1,10 @@
-apiVersion: apps/v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: httpd-cic
   labels:
     app: httpd-cic
 spec:
-  selector: 
-    matchLabels: 
-      app: httpd-cic
       serviceAccountName: cpx
       containers:
       - name: httpd-cic
