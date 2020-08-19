@@ -1,8 +1,11 @@
-apiVersion: extensions/v1beta1
+apiVersion: app/v1
 kind: Deployment
 metadata:
   name: apache-webserver
 spec:
+  selector: 
+    matchLabels: 
+      app: apache-webserver
   replicas: 4
   template:
     metadata:
