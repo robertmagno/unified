@@ -5,6 +5,9 @@ metadata:
   labels:
     app: httpd-cic
 spec:
+  selector: 
+    matchLabels: 
+      app: httpd-cic
       serviceAccountName: cpx
       containers:
       - name: httpd-cic
@@ -25,6 +28,8 @@ spec:
            value: "yes"
          - name: "LOGLEVEL"
            value: "DEBUG"
+         - name: "NS_APPS_NAME_PREFIX"
+           value: "unified"
         args:
           - --ingress-classes
             vpx
